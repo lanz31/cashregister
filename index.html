@@ -5,17 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cash Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="script.js"></script>
 </head>
 <body>
-    <label>Product</label>
-    <input type="text">
+    <div class="form-group">
+        <label>Product: </label><br>
+        <input type="text" id="product">
+    </div>
 
-    <label>Price</label>
-    <input type="text">
+    <div class="form-group">
+        <label>Price: </label><br>
+        <input type="text" id="price">
+    </div>
 
-    <label>Quantity</label>
-    <input type="text">
+    <div class="form-group">
+        <label>Quantity: </label><br>
+        <input type="text" id="quantity">
+    </div>
 
-    <input type="button" value="Get Total">
+    <div class="form-group">
+        <input type="button" class="btn btn-primary" value="Get Total" onclick="getTotal()">
+    </div>
+
+    <div class="form-group">
+        <label>Total: <p id="total"></p></label>
+    </div>
+
+    <div class="form-group">
+        <label>Input Cash: </label><br>
+        <input type="text" id="inpcash">
+    </div>
+
+    <div class="form-group">
+        <input type="button" class="btn btn-primary" value="Save" onclick="save()">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label>Summary</label><br>
+        <label>Product: <p id="sumProd"></p></label><br>
+        <label>Price: <p id="sumPrice"></p></label><br>
+        <label>Quantity: <p id="sumQty"></p></label><br>
+        <label>Total: <p id="sumTotal"></p></label><br>
+        <label>Cash: <p id="sumCash"></p></label><br>
+        <label>Change: <p id="sumChange"></p></label>
+    </div>
 </body>
 </html>
